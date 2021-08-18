@@ -18,5 +18,3 @@ if __name__ == '__main__':
             type_task = st.radio("Select an Embedding Model", ("Sentence Transformer", "Flair"))
             if type_task == 'Sentence Transformer':
                 Sentence_Transformer()
-            if type_task == 'Flair': 
-                Flair()
