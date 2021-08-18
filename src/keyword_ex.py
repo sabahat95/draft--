@@ -58,7 +58,7 @@ def Sentence_Transformer():
 
     st.subheader("Sentence Transformer")
 
-    options = ['paraphrase-mpnet-base-v2', "paraphrase-MiniLM-L6-v2", "paraphrase-multilingual-mpnet-base-v2", "paraphrase-TinyBERT-L6-v2", "paraphrase-distilroberta-base-v2"]
+    options = ['paraphrase-mpnet-base-v2', "paraphrase-MiniLM-L6-v2"]
 
     st_mod = st.selectbox("Select a Tansformer Model", options) 
 
@@ -74,23 +74,6 @@ def Sentence_Transformer():
                     df = sent_trans(raw_text, n_gram, no_kw, "paraphrase-MiniLM-L6-v2")
                     write_df(df)
 
-    if st_mod == "paraphrase-multilingual-mpnet-base-v2":
-            no_kw, n_gram, raw_text = input()
-            if st.button("Show Keywords"):
-                    df = sent_trans(raw_text, n_gram, no_kw, "paraphrase-multilingual-mpnet-base-v2")
-                    write_df(df)
-
-    if st_mod == "paraphrase-TinyBERT-L6-v2":
-            no_kw, n_gram, raw_text = input()
-            if st.button("Show Keywords"):
-                    df = sent_trans(raw_text, n_gram, no_kw, "paraphrase-TinyBERT-L6-v2")
-                    write_df(df)
-
-    if st_mod == "paraphrase-distilroberta-base-v2":
-            no_kw, n_gram, raw_text = input()
-            if st.button("Show Keywords"):
-                    df = sent_trans(raw_text, n_gram, no_kw, "paraphrase-distilroberta-base-v2")
-                    write_df(df)
 
     
 # ------------------------------------------------------------------------------------------------------------------------- Sentence Transformer ends
