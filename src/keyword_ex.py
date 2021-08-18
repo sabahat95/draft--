@@ -3,8 +3,6 @@ import pandas as pd
 import base64
 from keybert import KeyBERT
 import flair
-import tensorflow_hub
-import spacy
 from flair.embeddings import TransformerDocumentEmbeddings
 from sentence_transformers import SentenceTransformer
 
